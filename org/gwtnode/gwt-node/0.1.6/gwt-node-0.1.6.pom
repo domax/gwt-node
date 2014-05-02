@@ -10,7 +10,7 @@
 	<groupId>org.gwtnode</groupId>
 	<artifactId>gwt-node</artifactId>
 	<name>GWT Node.js Adaptor</name>
-	<version>0.1.5</version>
+	<version>0.1.6</version>
 	<packaging>jar</packaging>
 
 	<properties>
@@ -93,46 +93,18 @@
 			<resource>
 				<directory>modules/mailcomposer/src</directory>
 			</resource>
+			<resource>
+				<directory>modules/xml2js/src</directory>
+			</resource>
+			<resource>
+				<directory>modules/xmlCrypto/src</directory>
+			</resource>
+			<resource>
+				<directory>modules/xmldom/src</directory>
+			</resource>
 		</resources>
 	
 		<plugins>
-
-					<!--
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-        <version>1.3</version>
-				<artifactId>maven-antrun-plugin</artifactId>
-				<executions>
-
-					<execution>
-						<id>clean</id>
-						<phase>clean</phase>
-						<configuration>
-							<tasks>
-								<ant antfile="build.xml" target="clean"/>
-							</tasks>
-						</configuration>
-						<goals>
-							<goal>run</goal>
-						</goals>
-					</execution>
-
-					<execution>
-						<id>compile</id>
-						<phase>compile</phase>
-						<configuration>
-							<tasks>
-								<ant antfile="build.xml" target="build"/>
-							</tasks>
-						</configuration>
-						<goals>
-							<goal>run</goal>
-						</goals>
-					</execution>
-
-				</executions>
-			</plugin>
-					-->
 
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -154,36 +126,14 @@
 								<source>modules/helenus/src</source>
 								<source>modules/nodemailer/src</source>
 								<source>modules/mailcomposer/src</source>
+								<source>modules/xml2js/src</source>
+								<source>modules/xmlCrypto/src</source>
+								<source>modules/xmldom/src</source>
 							</sources>
 						</configuration>
 					</execution>
 				</executions>
 			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<version>2.3.2</version>
-<!-- 				<configuration> -->
-<!-- 					<excludes> -->
-<!-- 						<include>**/*.java</include> -->
-<!-- 					</excludes> -->
-<!-- 				</configuration> -->
-			</plugin>
-
-<!-- 			<plugin> -->
-<!-- 				<groupId>org.apache.maven.plugins</groupId> -->
-<!-- 				<artifactId>maven-source-plugin</artifactId> -->
-<!-- 				<version>2.2.1</version> -->
-<!-- 				<executions> -->
-<!-- 					<execution> -->
-<!-- 						<id>attach-sources</id> -->
-<!-- 						<goals> -->
-<!-- 							<goal>jar</goal> -->
-<!-- 						</goals> -->
-<!-- 					</execution> -->
-<!-- 				</executions> -->
-<!-- 			</plugin> -->
 
 			<plugin>
 				<artifactId>maven-deploy-plugin</artifactId>
